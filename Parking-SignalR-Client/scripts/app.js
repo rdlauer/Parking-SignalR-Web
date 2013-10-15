@@ -14,7 +14,7 @@ $(function () {
     chat.client.broadcastMessage = function (result) {
         var arr = $.parseJSON(result);
         app.gauge.drawGauge(arr.length);
-        $("#available").text(arr.toString().replace(/,/g, ", "));
+        $("#available-spots").text(arr.toString().replace(/,/g, ", "));
     };
     
 });
