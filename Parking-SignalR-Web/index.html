@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Parking Availability</title>
+	<link rel="stylesheet" type="text/css" href="Styles/parking.css" />
+	<script src="Scripts/jquery-1.10.2.js"></script>
+	<script src="Scripts/jquery.signalR-1.1.3.js"></script>
+	<script src="http://localhost/parking-signalr-web/signalr/hubs"></script>
+	<script src="Scripts/kendo.all.min.js"></script>
+	<script src="Scripts/parking.js"></script>
+</head>
+	<body>
+	        
+	    <h1>Parking Availability</h1>
+	        
+	    <script id="template" type="text/x-kendo-template">
+	        # for (var i = 1; i <= 10; i++) { #
+	            <div class="parkingContainer">
+	                
+	                <div class="roundedOne">
+	                    <input type="checkbox" id="park${i}" checked="checked" value="${i}" />
+	                    <label for="park${i}"></label>
+	                </div>
+	
+	                <div class="cbLabel">
+	                    Parking Spot ${i}
+	                </div>
+	                
+	            </div>
+	        # } #
+	    </script>
+	
+	    <div class="content"></div>
+	
+	</body>
+</html>

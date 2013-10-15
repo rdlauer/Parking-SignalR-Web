@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <link href="kendo/styles/kendo.dataviz.mobile.min.css" rel="stylesheet" />
+        <link href="kendo/styles/kendo.dataviz.flat.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>        
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.dataviz.mobile.min.js"></script>
+        <script src="scripts/jquery.signalR-1.1.3.js"></script>
+        <script src="http://localhost/parking-signalr-web/signalr/hubs"></script>
+        <script src="scripts/app.js"></script>
+    </head>
+    <body>
+
+        <div data-role="view" data-init="app.gauge.createGauge">
+            
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">Parking Availability</span>
+                </div>
+            </div>
+
+            <div data-role="content" class="view-content">
+                <div id="gauge"></div>
+            </div>
+            
+            <div id="available-wrapper">
+                Available Spots:
+                <br />
+                <span id="available-spots"></span>
+            </div>
+
+        </div>
+
+    </body>
+</html>
